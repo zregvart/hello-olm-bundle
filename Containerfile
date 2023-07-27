@@ -1,4 +1,4 @@
-FROM scratch
+FROM registry.access.redhat.com/ubi9/ubi-micro:latest@sha256:57ac8525717f02853b992b0fab41752d4120e5d85163acd8ab696c8a94a715b5
 
 LABEL operators.operatorframework.io.bundle.mediatype.v1=registry+v1
 LABEL operators.operatorframework.io.bundle.manifests.v1=manifests/
