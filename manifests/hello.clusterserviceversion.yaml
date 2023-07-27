@@ -1,0 +1,24 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+  name: hello-olm.v0.0.1
+spec:
+  displayName: Hello Operator
+  version: 0.0.1
+  install:
+    spec:
+      deployments:
+      - name: hello-olm-operator
+        spec:
+          template:
+            spec:
+              containers:
+                - name: hello-olm-operator
+                  image: quay.io/zregvart-redhat/hello-olm-operator:latest
+          replicas: 1
+  customresourcedefinitions:
+    owned:
+    - name: hello.olm.regvart.com
+      version: v1alpha1
+      kind: Hello
