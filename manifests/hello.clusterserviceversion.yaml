@@ -16,7 +16,7 @@ spec:
               spec:
                 containers:
                   - name: hello-olm-operator
-                    image: quay.io/zregvart-redhat/hello-olm-operator@cafe
+                    image: quay.io/zregvart-redhat/hello-olm-operator:latest
             replicas: 1
   customresourcedefinitions:
     owned:
